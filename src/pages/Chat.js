@@ -13,7 +13,7 @@ function timeConverter(UNIX_timestamp) {
     var sec = ('0' + a.getSeconds()).slice(-2);
     var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
     return time;
-    /**/
+
 }
 
 
