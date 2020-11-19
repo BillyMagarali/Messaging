@@ -67,6 +67,7 @@ export default class Login extends Component {
                     <p>
                         Fill in the form below to login to your account.
           </p>
+
                     <div>
                         <input
                             placeholder="Email"

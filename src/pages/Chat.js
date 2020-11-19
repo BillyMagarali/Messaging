@@ -14,7 +14,7 @@ function timeConverter(UNIX_timestamp) {
     var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
     return time;
 }
-console.log(timeConverter(0));
+
 
 export default class Chat extends Component {
     constructor(props) {
@@ -43,7 +43,7 @@ export default class Chat extends Component {
             this.setState({ readError: error.message });
         }
     }
-    /*myString := DateTimeToStr(UnixToDateTime(Epoch));*/
+
     handleChange(event) {
         this.setState({
             content: event.target.value,
@@ -76,9 +76,9 @@ export default class Chat extends Component {
             <div>
                 <div className="chats">
                     {this.state.chats.map(chat => {
-                        return <div>
-                            <p class="user" key={chat.timestamp}><strong>{this.state.user.email}</strong> <em>{timeConverter(chat.timestamp)}</em></p>
-                            <p class="chat" key={chat.timestamp}>{chat.content}</p>
+                        return <div key={chat.timestamp}>
+                            <p><strong>{this.state.user.email}</strong> <em>{timeConverter(chat.timestamp)}</em></p>
+                            <p>{chat.content}</p>
                         </div>
 
                     })}

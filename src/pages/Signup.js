@@ -10,7 +10,7 @@ export default class SignUp extends Component {
         this.state = {
             error: null,
             email: '',
-            password: '',
+            password: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -59,6 +59,7 @@ export default class SignUp extends Component {
           <Link to="/">Messaging</Link>
                     </h1>
                     <p>Fill in the form below to create an account.</p>
+
                     <div>
                         <input placeholder="Email" name="email" type="email" onChange={this.handleChange} value={this.state.email}></input>
                     </div>
