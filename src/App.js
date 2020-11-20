@@ -66,9 +66,9 @@ class App extends Component {
       <Router basename="/messaging">
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <PrivateRoute path="/chat" authenticated={this.state.authenticated} component={Chat}></PrivateRoute>
-          <PublicRoute path="/signup" authenticated={this.state.authenticated} component={Signup}></PublicRoute>
-          <PublicRoute path="/login" authenticated={this.state.authenticated} component={Login}></PublicRoute>
+          <PrivateRoute exact path="/chat" authenticated={this.state.authenticated} component={Chat}></PrivateRoute>
+          <PublicRoute exact path="/signup" authenticated={this.state.authenticated} component={Signup}></PublicRoute>
+          <PublicRoute exact path="/login" authenticated={this.state.authenticated} component={Login}></PublicRoute>
         </Switch>
       </Router>
     );
