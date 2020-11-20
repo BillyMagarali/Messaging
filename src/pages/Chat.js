@@ -78,7 +78,7 @@ export default class Chat extends Component {
                 <div className="chats">
                     {this.state.chats.map(chat => {
                         return <div key={chat.timestamp}>
-                            <p><strong>{this.state.user.email}</strong> <em>{timeConverter(chat.timestamp)}</em></p>
+                            <p><strong>{user.email}</strong> <em>{timeConverter(chat.timestamp)}</em></p>
                             <p>{chat.content}</p>
                         </div>
 
