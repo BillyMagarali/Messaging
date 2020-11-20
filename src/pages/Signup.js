@@ -54,10 +54,8 @@ export default class SignUp extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <h1>
-                        Sign Up to
-          <Link to="/">Messaging</Link>
-                    </h1>
+
+                    <h1>Sign up to <Link to="/">Messaging</Link></h1>
                     <p>Fill in the form below to create an account.</p>
 
                     <div>
