@@ -63,7 +63,7 @@ class App extends Component {
 
   render() {
     return this.state.loading === true ? <h2>Loading...</h2> : (
-      <Router>
+      <Router basename="/messaging">
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <PrivateRoute path="/chat" authenticated={this.state.authenticated} component={Chat}></PrivateRoute>
