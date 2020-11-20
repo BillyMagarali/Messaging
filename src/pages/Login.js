@@ -58,12 +58,7 @@ export default class Login extends Component {
                     autoComplete="off"
                     onSubmit={this.handleSubmit}
                 >
-                    <h1>
-                        Login to
-            <Link to="/">
-                            Messaging
-            </Link>
-                    </h1>
+                    <h1>Login to <Link to="/">Messaging</Link></h1>
                     <p>
                         Fill in the form below to login to your account.
           </p>
