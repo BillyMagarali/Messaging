@@ -59,7 +59,8 @@ export default class Chat extends Component {
             await db.ref("chats").push({
                 content: this.state.content,
                 timestamp: Date.now(),
-                uid: this.state.user.uid
+                uid: this.state.user.uid,
+                email: this.state.user.email
             });
             this.setState({ content: '' });
 
@@ -78,7 +79,7 @@ export default class Chat extends Component {
                 <div className="chats">
                     {this.state.chats.map(chat => {
                         return <div key={chat.timestamp}>
-                            <p><strong>{user.email}</strong> <em>{timeConverter(chat.timestamp)}</em></p>
+                            <p><strong>{chat.email}</strong> <em>{timeConverter(chat.timestamp)}</em></p>
                             <p>{chat.content}</p>
                         </div>
 
