@@ -13,6 +13,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import { auth } from './services/firebase';
 
+
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
   return (
     <Route
@@ -63,6 +64,8 @@ class App extends Component {
 
   render() {
     return this.state.loading === true ? <h2>Loading...</h2> : (
+
+
       <Router basename="/messaging">
         <Switch>
           <Route exact path="/" component={Home}></Route>
@@ -71,6 +74,7 @@ class App extends Component {
           <PublicRoute exact path="/login" authenticated={this.state.authenticated} component={Login}></PublicRoute>
         </Switch>
       </Router>
+
     );
   }
 

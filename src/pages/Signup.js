@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { signup, signInWithGoogle, signInWithGitHub } from "../helpers/auth";
 
 
+
 export default class SignUp extends Component {
 
     constructor(props) {
@@ -29,6 +30,8 @@ export default class SignUp extends Component {
         this.setState({ error: '' });
         try {
             await signup(this.state.email, this.state.password);
+
+
         } catch (error) {
             this.setState({ error: error.message });
         }
@@ -57,12 +60,11 @@ export default class SignUp extends Component {
 
                     <h1>Sign up to <Link to="/">Messaging</Link></h1>
                     <p>Fill in the form below to create an account.</p>
-
                     <div>
-                        <input placeholder="Email" name="email" type="email" onChange={this.handleChange} value={this.state.email}></input>
+                        <input placeholder="Email" required="true" name="email" type="email" onChange={this.handleChange} value={this.state.email}></input>
                     </div>
                     <div>
-                        <input placeholder="Password" name="password" onChange={this.handleChange} value={this.state.password} type="password"></input>
+                        <input placeholder="Password" required="true" name="password" onChange={this.handleChange} value={this.state.password} type="password"></input>
                     </div>
                     <div>
                         {this.state.error ? <p>{this.state.error}</p> : null}
@@ -81,6 +83,8 @@ export default class SignUp extends Component {
 </button>
                     <hr></hr>
                     <p>Already have an account? <Link to="/login">Login</Link></p>
+                    <hr></hr>
+                    <p>Go back to <Link to="/">Menu</Link></p>
                 </form>
             </div>
         )

@@ -6,9 +6,11 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div><h1>Welcome to <Link to="/">Messaging</Link></h1>
+            <div className="home">
+                <h1>Welcome to <Link to="/">Messaging</Link></h1>
                 <h2> <Link to="/Login">Login</Link></h2>
                 <h2> <Link to="/Signup">Sign Up</Link></h2>
+
             </div>
 
 
