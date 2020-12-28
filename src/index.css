@@ -130,9 +130,11 @@ button:hover:after {
 
 .container {
   display: flex;
-  flex-direction: column;
-  
+  flex-flow: column;
+  height: 95vh;
 }
+
+
 
 
 .chats {
@@ -141,8 +143,14 @@ button:hover:after {
   overflow: auto;
   max-height: 86vh;
   scroll-behavior: smooth;
+  flex: 1;
   
   
+}
+
+.sendform {
+  min-height: 4vh;
+
 }
 
 .home {
