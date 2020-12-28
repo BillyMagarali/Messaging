@@ -201,7 +201,7 @@ code {
   }
 }
 
-.message{
+.message, .home{
   animation: animationFrames ease 1s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
