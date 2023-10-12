@@ -3,6 +3,7 @@ import { auth } from "../services/firebase";
 import { db } from "../services/firebase";
 
 
+//Convert UNIX timestamp to a formatted date for each message
 function timeConverter(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp);
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
